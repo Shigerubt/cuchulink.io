@@ -1,0 +1,62 @@
+:root {
+    --image-size: 140px; /* Puedes cambiar este valor para ajustar el tamaño inicial de la imagen */
+}
+
+html,
+body {
+    height: 100%;    
+}
+
+body {
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#central-image-container {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 6s ease-in-out infinite;
+}
+
+#central-image {
+    width: var(--image-size);
+    height: var(--image-size);
+    cursor: pointer;
+    transition: width 0.1s ease, height 0.1s ease, transform 1s ease-in-out; /* Ajuste de transición */
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
