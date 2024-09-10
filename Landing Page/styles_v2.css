@@ -1,0 +1,413 @@
+/* Variables de color */
+:root {
+    --blanco: #FFFFFF;
+    --rosa-claro: #FFDCE5;
+    --amarillo: #F2DDA4;
+    --marron-claro: #AC8587;
+    --rosa-oscuro: #E77FA0;
+    --rojo: #E22020;
+    --marron-oscuro: #3F0B1B;
+    --lila: #A37DF4;
+}
+
+/* Tipografía */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: var(--blanco);
+    color: var(--marron-oscuro);
+    font-size: 14px; /* Tamaño de texto base reducido */
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 2em; /* Tamaño de texto reducido */
+    text-shadow: 2px 2px var(--rosa-oscuro);
+}
+
+h2 {
+    font-size: 1.5em; /* Tamaño de texto reducido */
+    text-shadow: 1px 1px var(--rosa-oscuro);
+}
+
+h3 {
+    font-size: 1.2em; /* Tamaño de texto reducido */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--marron-oscuro);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;  /* Fija el header en la parte superior */
+    top: 0;           /* Posiciona el header en la parte superior */
+    left: 0;          /* Alinea el header al borde izquierdo */
+    width: 100%;     /* Asegura que el header ocupe todo el ancho de la ventana */
+    z-index: 1000;    /* Asegura que el header esté por encima de otros elementos */
+    margin: 0;        /* Elimina márgenes que puedan causar desbordamiento */
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 3em;
+}
+
+
+.logo img {
+    max-width: 100%;   /* Se asegura de que la imagen no salga del contenedor */
+    height: auto;      /* Mantiene la proporción de la imagen */
+    width: 100%;        /* O ajusta el tamaño en porcentaje */
+}
+
+    
+
+
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    padding-right: 3em;
+    transition: all 0.3s ease;
+}
+
+.nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px; /* Ajusta según la altura de tu header */
+    left: 0;
+    width: 100%;
+    background-color: var(--marron-oscuro);
+    padding: 1em 0;
+    z-index: 1000;
+}
+
+.nav ul li {
+    padding: 1em 0;
+    text-align: center;
+}
+
+.nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    font-size: 0.9em; /* Tamaño de texto reducido */
+}
+
+.nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--rosa-claro);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Estilos para el menú de hamburguesa */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    padding-right: 3em;
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--blanco);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Cambios en el estado activo del menú de hamburguesa */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.btn {
+    background-color: var(--rosa-oscuro);
+    padding: 0.5em 1em; /* Tamaño de botón reducido */
+    color: var(--blanco);
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em; /* Tamaño de texto reducido */
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background-color: var(--marron-claro);
+}
+
+.btn-cta {
+    background-color: var(--rosa-oscuro);
+    padding: 0.7em 1.5em; /* Tamaño de botón reducido */
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 0.9em; /* Tamaño de texto reducido */
+}
+
+.btn-cta:hover {
+    background-color: var(--marron-claro);
+    transform: translateY(-3px);
+}
+
+.hero {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 2em 1em;
+}
+
+.hero-image {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 1s ease;
+    margin-top: 1em;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+.cta-container {
+    margin-top: 2em;
+}
+
+.section {
+    padding: 2em 1em; /* Tamaño de padding reducido */
+    text-align: center;
+    background-color: var(--rosa-claro);
+    border-radius: 20px;
+    margin: 2em 1em;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.section-title {
+    color: var(--marron-oscuro);
+    margin-bottom: 1em;
+}
+
+.section.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.funcionalidades-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.funcionalidad-item {
+    background-color: var(--lila);
+    padding: 1.5em; /* Tamaño de padding reducido */
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.funcionalidad-item:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.beneficios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.beneficio {
+    background-color: var(--amarillo);
+    padding: 1.5em; /* Tamaño de padding reducido */
+    margin: 1em;
+    border-radius: 20px;
+    flex: 1 1 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+.faq {
+    background-color: var(--rosa-oscuro);
+    padding: 1.5em; /* Tamaño de padding reducido */
+    margin-bottom: 1em;
+    border-radius: 20px;
+    color: var(--blanco);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.faq:hover {
+    transform: translateY(-5px);
+}
+
+.cta {
+    background-color: var(--rosa-oscuro);
+    color: var(--blanco);
+    padding: 2em 1em; /* Tamaño de padding reducido */
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--marron-oscuro);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column; /* Cambiar a columna para centrar los elementos verticalmente */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    justify-content: center; /* Centrar los elementos verticalmente */
+    padding: 1em;
+    border-radius: 20px 20px 0 0;
+    text-align: center; /* Centrar el texto */
+}
+
+.footer-links {
+    margin-bottom: 1em; /* Espacio entre los enlaces y los iconos sociales */
+}
+
+.footer-links a, .footer-social a {
+    color: var(--blanco);
+    margin: 0 0.5em; /* Espacio entre los enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9em; /* Tamaño de texto reducido */
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo para imágenes pequeñas */
+.small-logo {
+    max-width: 55px; /* Reducir el tamaño de los iconos */
+    max-height: 55px; /* Reducir el tamaño de los iconos */
+    transition: transform 0.3s ease;
+    margin: 0 0.5em; /* Espacio entre los iconos */
+}
+
+.small-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Video responsivo */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    margin: 2em auto; /* Centra el video horizontalmente */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsivo */
+@media (max-width: 874px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        padding: 1.5em;
+    }
+
+   
+
+    .beneficios {
+        flex-direction: column;
+    }
+
+    .hero {
+        justify-content: flex-end;
+    }
+
+    .hero-image {
+        bottom: auto;
+        width: 100%;
+        max-width: 90%;
+    }
+}
