@@ -1,10 +1,10 @@
-Cuchulink.io
+#Cuchulink.io
 
-# Intro
+## Intro
 
 Esta sección presenta un cerdo flotando en el espacio, acompañado de efectos de sonido y visuales interactivos.
 
-## Archivos de la Intro
+### Archivos de la Intro
 
 - **index.html**: Estructura HTML de la página de introducción.
 - **styles.css**: Estilos CSS que definen la apariencia visual de la página, incluyendo la animación de las partículas y el cerdo flotante.
@@ -13,20 +13,20 @@ Esta sección presenta un cerdo flotando en el espacio, acompañado de efectos d
 - **cuchu.png**: Logotipo del cerdo flotante que aparece en la introducción.
 - **explotion.mp3**: Archivo de sonido que se reproduce cuando el cerdo explota.
 
-# Landing Page
+## Landing Page
 
-## HTML
+### HTML
 
 - **Estructura de la Página**: El archivo `main.html` contiene la estructura básica de la página, incluyendo el encabezado, secciones y pie de página.
 - **Carruseles**: Secciones como "Funcionalidades Principales" y "¿Por Qué Usar Cuchulink?" implementan carruseles utilizando Swiper.js.
 
-## CSS
+### CSS
 
 - **Estilos Generales**: El archivo `styles_v2.css` define los estilos generales de la página, incluyendo colores, tipografías y diseño responsivo.
 - **Swiper Styles**: Estilos específicos para los carruseles de Swiper.js.
 - **Video Responsivo**: Estilos para asegurar que el video de YouTube se ajuste correctamente a diferentes resoluciones.
 
-## JavaScript
+### JavaScript
 
 - **Interactividad**: El archivo `scripts_v2.js` maneja la lógica de programación para la interactividad de la página.
 - **Suavizado de Scroll**: Implementa un desplazamiento suave al hacer clic en los enlaces de navegación.
