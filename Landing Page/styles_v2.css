@@ -1,4 +1,4 @@
-/* Variables de color */
+/* Variables de color basados en el documento de identidad de cuchulink*/
 :root {
     --blanco: #FFFFFF;
     --rosa-claro: #FFDCE5;
@@ -10,7 +10,14 @@
     --lila: #A37DF4;
 }
 
-/* Tipografía */
+/* Evitar el scroll horizontal debido a que el carrousel (swiper) 
+hace que la pagina se extienda horizontalmente esto fue
+lo unico que se me ocurrio*/
+body, html {
+    overflow-x: hidden;
+}
+
+/* Tipografía basada el documento de identidad de cuchulink*/
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -37,7 +44,7 @@ h3 {
     font-size: 1.2em; /* Tamaño de texto reducido */
 }
 
-/* Header */
+/* Header estatico redondeado y encima de los otros elementos dinamicos*/
 header {
     display: flex;
     justify-content: space-between;
@@ -58,16 +65,11 @@ header {
     padding-left: 3em;
 }
 
-
 .logo img {
     max-width: 100%;   /* Se asegura de que la imagen no salga del contenedor */
     height: auto;      /* Mantiene la proporción de la imagen */
     width: 100%;        /* O ajusta el tamaño en porcentaje */
 }
-
-    
-
-
 
 .nav ul {
     list-style: none;
@@ -120,7 +122,8 @@ header {
     transform: scaleX(1);
 }
 
-/* Estilos para el menú de hamburguesa */
+/* Estilos para el menú de hamburguesa, este solo aparecera
+cuando la resolucion alcance 874px*/
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -299,7 +302,7 @@ header {
 }
 
 .faq {
-    background-color: var(--rosa-oscuro);
+    background-color: var(--lila);
     padding: 1.5em; /* Tamaño de padding reducido */
     margin-bottom: 1em;
     border-radius: 20px;
@@ -361,13 +364,45 @@ header {
     transform: scale(1.1);
 }
 
+/* Swiper o carrousel styles para mantener el mismo tamano de la pagina */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    padding: 1em 0; /* Añadir padding para que las flechas de navegación no se superpongan */
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+    box-sizing: border-box;
+    background: var(--amarillo);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos adicionales para los botones o puntos que se usan para desplazar*/
+.swiper-pagination-bullet {
+    background: var(--marron-oscuro); /* Color de los bullets de paginación */
+    opacity: 0.7; /* Opacidad de los bullets de paginación */
+    transition: background 0.3s ease, opacity 0.3s ease; /* Transición para los bullets de paginación */
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--rosa-oscuro); /* Color de los bullets activos de paginación */
+    opacity: 1; /* Opacidad de los bullets activos de paginación */
+}
+
 /* Video responsivo */
 .video-container {
+    text-align: center;
     position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-    margin: 2em auto; /* Centra el video horizontalmente */
+    overflow:hidden;
+    padding-bottom: 46%;
+    margin: 1em 5em 1em 5em;
 }
 
 .video-container iframe {
@@ -376,6 +411,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;
 }
 
 /* Responsivo */
@@ -394,8 +430,6 @@ header {
         display: flex;
         padding: 1.5em;
     }
-
-   
 
     .beneficios {
         flex-direction: column;
