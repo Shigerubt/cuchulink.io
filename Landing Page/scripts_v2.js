@@ -47,4 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
             navLinks.classList.remove('active');
         });
     });
-});
+
+    // Inicializar Swiper
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        centeredSlides: true, // Centrar los slides activos
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+});  
