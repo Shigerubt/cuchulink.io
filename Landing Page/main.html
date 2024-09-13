@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuchulink - Digitaliza tus Cuchubales</title>
-<!-- Montserrat and Raleway -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap">
+    <!-- Montserrat and Raleway -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap">
     
-<!-- More Sugar font -->
-<link href="https://fonts.cdnfonts.com/css/more-sugar" rel="stylesheet">
+    <!-- More Sugar font -->
+    <link href="https://fonts.cdnfonts.com/css/more-sugar" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-<!-- CSS -->
-<link rel="stylesheet" href="styles_v2.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles_v2.css">
 </head>
 
 <body>
@@ -39,7 +42,6 @@
 
     <!-- Sección Hero -->
     <section id="inicio" class="section">
-        
         <div class="hero-content">
             <h1>Digitaliza y Automatiza tus Cuchubales con Cuchulink</h1>
             <p>Gestiona ahorros colectivos de forma segura y transparente utilizando blockchain. Cuchubales automatizados al alcance de tu mano.</p>
@@ -57,49 +59,65 @@
             Cuchulink es una plataforma que transforma los tradicionales cuchubales o tandas en un sistema digital automatizado basado en blockchain. Ofrecemos una solución segura y eficiente para ahorrar colectivamente con amigos, familiares o compañeros de trabajo, asegurando transparencia en cada transacción.
         </p>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/OvQVcwf9biM?si=8ZlJJAHtbjR1GNXC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OvQVcwf9biM?si=yfGQvX-t9zG4bqW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 
     <!-- Sección Funcionalidades -->
     <section id="funcionalidades" class="section">
         <h2 class="section-title">Funcionalidades Principales</h2>
-        <ul class="funcionalidades-list">
-            <li class="funcionalidad-item">
-                <h3>Autenticación con Billetera</h3>
-                <p>Inicia sesión y gestiona tus cuchubales de manera segura.</p>
-            </li>
-            <li class="funcionalidad-item">
-                <h3>Creación de Cuchubales</h3>
-                <p>Personaliza tus cuchubales con parámetros ajustables como frecuencia, monto y participantes.</p>
-            </li>
-            <li class="funcionalidad-item">
-                <h3>Gestión Automatizada</h3>
-                <p>Contribuciones, recompensas y penalizaciones gestionadas automáticamente a través de contratos inteligentes.</p>
-            </li>
-            <li class="funcionalidad-item">
-                <h3>Panel de Control</h3>
-                <p>Visualiza fácilmente tus ahorros, contribuciones y recompensas.</p>
-            </li>
-        </ul>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h3>Autenticación con Billetera</h3>
+                    <p>Inicia sesión y gestiona tus cuchubales de manera segura.</p>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Creación de Cuchubales</h3>
+                    <p>Personaliza tus cuchubales con parámetros ajustables como frecuencia, monto y participantes.</p>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Gestión Automatizada</h3>
+                    <p>Contribuciones, recompensas y penalizaciones gestionadas automáticamente a través de contratos inteligentes.</p>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Panel de Control</h3>
+                    <p>Visualiza fácilmente tus ahorros, contribuciones y recompensas.</p>
+                </div>
+            </div>
+            <!-- Agrega los botones de navegación si es necesario -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
 
     <!-- Sección Beneficios -->
     <section id="beneficios" class="section">
         <h2 class="section-title">¿Por Qué Usar Cuchulink?</h2>
-        <div class="beneficios">
-            <div class="beneficio">
-                <h3>Seguridad y Transparencia</h3>
-                <p>Gracias a la tecnología blockchain, cada transacción es inmutable y transparente.</p>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h3>Seguridad y Transparencia</h3>
+                    <p>Gracias a la tecnología blockchain, cada transacción es inmutable y transparente.</p>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Automatización Total</h3>
+                    <p>Elimina los errores humanos y facilita la gestión de ahorros colectivos.</p>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Inclusión Financiera</h3>
+                    <p>Cuchulink es accesible para usuarios con diversos niveles de experiencia tecnológica.</p>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Facilidad de Uso</h3>
+                    <p>Interfaz fácil de usar que simplifica la gestión de ahorros colectivos, permitiendo configurar y monitorear cuchubales desde cualquier dispositivo.</p>
+                </div>
             </div>
-            <div class="beneficio">
-                <h3>Automatización Total</h3>
-                <p>Elimina los errores humanos y facilita la gestión de ahorros colectivos.</p>
-            </div>
-            <div class="beneficio">
-                <h3>Inclusión Financiera</h3>
-                <p>Cuchulink es accesible para usuarios con diversos niveles de experiencia tecnológica.</p>
-            </div>
+            <!-- Agrega los botones de navegación si es necesario -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -148,6 +166,9 @@
             </a>
         </div>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts_v2.js"></script>
 </body>
 
